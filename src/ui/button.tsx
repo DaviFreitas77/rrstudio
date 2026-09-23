@@ -7,7 +7,7 @@ interface ButtonProps {
 }
 export function Button({ text, className, onClick }: ButtonProps) {
   return (
-       <div className="relative mt-8 flex justify-center lg:justify-start">
+       <div className="relative mt-8 flex justify-start">
           <button className="relative z-20 w-full max-w-70 cursor-pointer bg-[#C9A24D] px-8 py-3 font-bold text-black transition hover:bg-[#b9913e]" onClick={onClick}>
             {text}
           </button>

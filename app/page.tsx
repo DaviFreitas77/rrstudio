@@ -55,13 +55,13 @@ export default function Home() {
   ]
 
   return (
-    <main className="bg-black">
+    <main className="">
       <Hero />
-      <div className="py-4 bg-gradient-to-r from-black to-gray-700">
+      <div className="py-4 bg-gradient-to-r from-black to-gray-700 pb-40">
         <Marquee pauseOnHover className="[--duration:20s]">
           {comparisons.map((review) => (
             <div key={review.image1} className="flex items-center justify-center gap-4">
-              <div className="relative w-40 h-60  xl:w-90 xl:h-100">
+              <div className="relative w-40 h-60  xl:w-80 xl:h-100">
                 <Image
                   src={review.image1}
                   alt={review.alt1}
@@ -69,7 +69,7 @@ export default function Home() {
                   className="object-cover rounded-sm"
                 />
               </div>
-              <div className="relative w-40 h-60 xl:w-90 xl:h-100">
+              <div className="relative w-40 h-60 xl:w-80 xl:h-100">
                 <Image
                   src={review.image2}
                   alt={review.alt2}
@@ -84,7 +84,8 @@ export default function Home() {
       </div>
 
 
-      <section className="relative bg-[#F2EDE7] px-4 md:px-20 lg:px-40 pb-12 pt-12 mt-50">
+
+      <section className="relative bg-[#F2EDE7] px-4 md:px-20 lg:px-40 pb-12 pt-12 -mt-12 xl:mt-12">
         
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
           <svg

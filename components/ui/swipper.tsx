@@ -63,7 +63,7 @@ export default function Swipper({
       modules={[Autoplay, FreeMode,Pagination]}
       freeMode={freeMode}
       className={cn(
-        " swiper-continuous mt-20 w-full px-4",
+        " swiper-continuous  w-full px-4",
         isVertical && "h-[36rem] sm:h-[40rem] md:h-[46rem] lg:h-[52rem]",
         className,
       )}

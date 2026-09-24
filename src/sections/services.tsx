@@ -1,4 +1,6 @@
+import Swipper from "@/components/ui/swipper";
 import Image from "next/image";
+import { SwiperSlide } from "swiper/react";
 
 export function Services() {
 
@@ -9,7 +11,7 @@ export function Services() {
         { title: "Pedicure", alt: "Serviço de Pedicure", src: "/pe.jpg" },
     ];
     return (
-        <section className="relative bg-[#F2EDE7] px-4  lg:px-40 pb-20 pt-12 -mt-12 xl:mt-12 border-b  border-[#c08815]/10">
+        <section className="relative bg-[#F2EDE7] px-4  lg:px-40 pb-10 md:pb-20 pt-12 -mt-12 xl:mt-12 border-b  border-[#c08815]/10">
 
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
                 <svg
@@ -41,7 +43,7 @@ export function Services() {
                 </div>
 
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -70,6 +72,61 @@ export function Services() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className="md:hidden">
+                    <Swipper
+                        direction="horizontal"
+                        loop={false}
+                        autoplay={false}
+
+                        freeMode={{ enabled: false, momentum: false }}
+
+                        allowTouchMove={true}
+                        simulateTouch={true}
+                        pagination={true}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 2,
+
+                            },
+                            768: {
+                                slidesPerView: 3,
+
+                            },
+                        }}
+                    >
+                        {services.map((service, index) => (
+                            <SwiperSlide key={index} className="px-2">
+
+
+                                <div
+                                    key={index}
+                                    className="flex flex-col group cursor-pointer"
+                                >
+                                    <div className="w-full aspect-[4/5]  rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+                                        <Image
+                                            fill
+                                            alt={service.alt}
+                                            src={service.src}
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                        />
+                                    </div>
+
+                                    <div className="mt-3 sm:mt-5 flex flex-col items-center text-center">
+                                        <h3 className="text-lg sm:text-xl font-medium tracking-wide text-gray-800 group-hover:text-[#c08815] transition-colors duration-300">
+                                            {service.title}
+                                        </h3>
+
+                                        <button className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-semibold text-[#c08815] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c08815] after:origin-right group-hover:after:origin-left group-hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300">
+                                            Agendar serviço
+                                        </button>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+
+                    </Swipper>
                 </div>
             </div>
         </section>

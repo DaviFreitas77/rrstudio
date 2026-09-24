@@ -1,23 +1,44 @@
 'use client'
 
 import { Marquee } from "@/components/ui/marquee";
-import CircularText from "@/src/ui/circularText";
-import ScrollVelocity from "@/src/ui/scroll-velocity";
-import { Hero } from "@/src/ui/sections/hero";
+import CircularText from "@/components/ui/circularText";
+import ScrollVelocity from "@/components/ui/scroll-velocity";
+import { Hero } from "@/src/sections/hero";
+import { Services } from "@/src/sections/services";
 import Image from "next/image";
 
 import 'swiper/css';
+import { Check, MessageCircle, PanelsTopLeft, Rocket } from "lucide-react";
+import { SwiperSlide } from "swiper/react";
+import Swipper from "@/components/ui/swipper";
 
 export default function Home() {
-
-  const services = [
-    { title: "Cabelos", alt: "Serviço de Cabelos", src: "/cabeloo.jpg" },
-    { title: "Sobrancelhas", alt: "Serviço de Sobrancelhas", src: "/sobrancelha.jpg" },
-    { title: "Manicure", alt: "Serviço de Manicure", src: "/mao.jpg" },
-    { title: "Pedicure", alt: "Serviço de Pedicure", src: "/pe.jpg" },
+  const steps = [
+    {
+      metric: "10",
+      title: "anos de experiência",
+      description: "Experiência e aperfeiçoamento para cuidar de cada detalhe.",
+      icon: MessageCircle,
+    },
+    {
+      metric: "300",
+      title: "clientes atendidos",
+      description: "Pessoas que confiaram em nosso trabalho e cuidado.",
+      icon: PanelsTopLeft,
+    },
+    {
+      metric: "200",
+      title: "avaliações positivas",
+      description: "A satisfação de quem já viveu nossa experiência.",
+      icon: Check,
+    },
+    {
+      metric: "1",
+      title: "Publicamos",
+      description: "Colocamos no ar e configuramos o SEO para busca.",
+      icon: Rocket,
+    },
   ];
-
-
 
   const comparisons = [
     {
@@ -55,7 +76,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="">
+    <main className="bg-[#F2EDE7]">
       <Hero />
       <div className="py-4 bg-gradient-to-r from-black to-gray-700 pb-40">
         <Marquee pauseOnHover className="[--duration:20s]">
@@ -83,72 +104,66 @@ export default function Home() {
 
       </div>
 
+      <Services />
 
+      <section className="mt-30 flex flex-col items-center px-4 pb-30 sm:pb-40 lg:px-10 xl:px-20 2xl:px-40">
+        {/* Título */}
+        <div className="mb-12 text-center md:mb-16">
+          <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-[#c08815]">
+            Experiência Exclusiva
+          </span>
 
-      <section className="relative bg-[#F2EDE7] px-4 md:px-20 lg:px-40 pb-12 pt-12 -mt-12 xl:mt-12">
-        
-        <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
-          <svg
-            className="relative block w-full h-12 sm:h-20 md:h-28 lg:h-36"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,40 L1200,120 L0,120 Z"
-              fill="#F2EDE7"
-            ></path>
-          </svg>
+          <h2 className="mb-4 text-3xl font-light tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
+            Resultados que falam por si
+          </h2>
+
+          <div className="mx-auto mb-4 h-px w-12 bg-[#c08815]/40" />
         </div>
 
-    
-        <div className="relative z-10 max-w-7xl mx-auto">
-        
-          <div className="text-center mb-12 md:mb-16">
-            <span className="text-xs font-medium uppercase tracking-[0.2em] text-[#c08815] mb-2 block">
-              Experiência Exclusiva
-            </span>
-            <h2 className="text-3xl md:text-5xl font-light tracking-tight text-gray-900 mb-4">
-              Confira Nossos Serviços
-            </h2>
-            <div className="w-12 h-[1px] bg-[#c08815]/40 mx-auto mb-4" />
-            <p className="text-gray-600 font-light text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-              Descubra os nossos serviços exclusivos e transforme a sua aparência com um toque de elegância e cuidado.
-            </p>
-          </div>
+        {/* Cards */}
+        <div className="grid w-full max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="
+    group relative flex min-h-80 w-full
+    flex-col items-center justify-center
+    gap-8
+    bg-[#F9F6F1]
+    px-5 py-12
+    transition-all duration-500
+    hover:-translate-y-2
+    hover:shadow-[0_15px_40px_rgba(201,162,77,0.08)]
+    sm:min-h-85
+    lg:gap-10
+    lg:py-14
+  "
+            >
+              {/* Cantos */}
+              <span className="absolute left-0 top-0 h-7 w-7 border-l-2 border-t-2 border-[#C9A24D]" />
+              <span className="absolute right-0 top-0 h-7 w-7 border-r-2 border-t-2 border-[#C9A24D]" />
+              <span className="absolute bottom-0 left-0 h-7 w-7 border-b-2 border-l-2 border-[#C9A24D]" />
+              <span className="absolute bottom-0 right-0 h-7 w-7 border-b-2 border-r-2 border-[#C9A24D]" />
 
+              <p className="text-5xl font-light leading-none text-[#C9A24D] sm:text-6xl">
+                <span className="text-2xl sm:text-3xl">+</span>
+                {step.metric}
+              </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="flex flex-col group cursor-pointer"
-              >
+              <div className="flex flex-col items-center space-y-3">
+                <h3 className="text-center text-base font-semibold uppercase tracking-wide text-gray-900 sm:text-lg">
+                  {step.title}
+                </h3>
 
-                <div className="w-full aspect-[3/4] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
-                  <Image
-                    fill
-                    alt={service.alt}
-                    src={service.src}
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
-
-                {/* Informações e Ação */}
-                <div className="mt-5 flex flex-col items-center text-center">
-                  <h3 className="text-xl font-medium tracking-wide text-gray-800 group-hover:text-[#c08815] transition-colors duration-300">
-                    {service.title}
-                  </h3>
-
-                  <button className="mt-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#c08815] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c08815] after:origin-right group-hover:after:origin-left group-hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300">
-                    Agendar serviço
-                  </button>
-                </div>
+                <p className="max-w-xs text-center text-sm font-light leading-relaxed text-gray-500">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
+
     </main>
   );
 }

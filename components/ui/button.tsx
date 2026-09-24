@@ -10,7 +10,7 @@ interface ButtonProps {
 }
 export function Button({ text, className, onClick }: ButtonProps) {
   return (
-    <div className="relative mt-8 flex justify-start">
+    <div className="relative mt-8 flex justify-center lg:justify-start">
 
       <button
         className="group relative z-20 flex w-full max-w-70 cursor-pointer items-center overflow-hidden rounded border border-[#b9913e] px-2 py-3 text-white transition"

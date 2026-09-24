@@ -1,15 +1,17 @@
 import { TbSparkle } from "react-icons/tb";
-import { Button } from "../button";
-import CircularText from "../circularText";
+import { Button } from "../../components/ui/button";
+import CircularText from "../../components/ui/circularText";
 
 export function Hero() {
     return (
-        <section className="hero relative flex min-h-screen py-50  lg:items-center  px-4 text-white sm:px-10 md:px-20 justify-start 2xl:px-45">
+        <section className="hero relative flex min-h-screen py-50  md:items-center  px-4 text-white sm:px-10 md:px-20 justify-center lg:justify-start 2xl:px-45">
 
 
-            <div className="relative z-10 w-full max-w-80 lg:max-w-xl text-start 2xl:max-w-2xl">
-                <span className="mb-6 ml-4 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.2em] text-white">
-                    <span className="h-px w-8 bg-[#C9A24D]" />
+            <div className="relative z-10 w-full text-center max-w-80 
+            md:max-w-140  lg:max-w-xl lg:text-start 2xl:max-w-2xl">
+                <span className="mb-6 ml-4 flex items-center gap-4 text-xs font-medium uppercase tracking-[0.2em] text-white justify-center lg:justify-start">
+
+                    <span className="h-px w-8 bg-[#C9A24D] hidden lg:block" />
                     UM MOMENTO SÓ SEU
 
                 </span>

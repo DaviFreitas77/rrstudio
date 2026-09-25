@@ -1,4 +1,3 @@
-
 "use client";
 
 import { ArrowRight } from "lucide-react";
@@ -8,35 +7,55 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
 }
+
 export function Button({ text, className, onClick }: ButtonProps) {
   return (
-    <div className="relative mt-8 flex justify-center lg:justify-start">
-
+    <div className={`relative mt-8 flex justify-start ${className ?? ""}`}>
       <button
-        className="group relative z-20 flex w-full max-w-70 cursor-pointer items-center overflow-hidden rounded border border-[#b9913e] px-2 py-3 text-white transition"
+        className="
+          group relative z-20
+          flex w-full
+          cursor-pointer items-center
+          overflow-hidden rounded
+          border border-[#b9913e]
+          bg-[#b9913e]
+          px-4 py-3
+          text-white
+          transition
+          lg:max-w-70
+          lg:bg-transparent
+        "
         onClick={onClick}
       >
+        <div className="absolute left-0 top-0 hidden h-full w-10 bg-[#b9913e] transition-all duration-500 group-hover:w-full lg:block" />
 
-        <div className="absolute left-0 top-0 h-full w-10 bg-[#b9913e] transition-all duration-500 group-hover:w-full" />
+        {/* Texto centralizado */}
+        <span className="relative z-10 w-full text-center">
+          {text}
+        </span>
 
-
-        <div className="relative z-10 flex items-center gap-14">
-          <ArrowRight
-            size={20}
-            className="transition-transform duration-500 group-hover:translate-x-1 "
-          />
-
-          <span>{text}</span>
-        </div>
+        {/* Seta fixa na direita */}
+        <ArrowRight
+          size={20}
+          className="
+            absolute right-4 z-10
+            transition-transform duration-500
+            group-hover:translate-x-1
+          "
+        />
       </button>
-
-
 
       {/* Rabisco */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 600 220"
-        className="pointer-events-none absolute left-1/2 top-10 z-10 h-14 w-50 -translate-x-1/2 sm:left-35 sm:translate-x-0"
+        className="
+          pointer-events-none absolute
+          left-1/2 top-10 z-10
+          h-14 w-50
+          -translate-x-1/2
+          sm:left-35 sm:translate-x-0
+        "
         fill="none"
       >
         <g

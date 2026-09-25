@@ -63,7 +63,7 @@ export function Services() {
                 </div>
 
 
-                <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <div className="hidden lg:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -122,7 +122,7 @@ export function Services() {
                     ))}
                 </div>
 
-                <div className="md:hidden">
+                <div className="lg:hidden">
                     <Swipper
                         direction="horizontal"
                         loop={false}
@@ -152,7 +152,7 @@ export function Services() {
                                     key={index}
                                     className="flex flex-col group cursor-pointer"
                                 >
-                                    <div className="w-full aspect-[6/7] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+                                    <div className="w-full aspect-[6/7] sm:aspect-[2/3] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
 
                                         <Image
                                             fill

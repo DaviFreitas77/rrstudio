@@ -4,7 +4,7 @@ import CircularText from "../../components/ui/circularText";
 
 export function Hero() {
     return (
-        <section className="hero relative flex min-h-screen py-50  md:items-center  px-4 text-white sm:px-10 md:px-20 justify-center lg:justify-start 2xl:px-45">
+        <section className="hero relative flex h-svh py-50  md:items-center  px-4 text-white sm:px-10 md:px-20 justify-center lg:justify-start 2xl:px-45">
 
 
             <div className="relative z-10 w-full text-center max-w-80 

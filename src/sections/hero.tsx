@@ -7,7 +7,7 @@ export function Hero() {
         <section
             className="
                 hero relative flex h-svh
-                items-end justify-start
+                items-center justify-start
                 px-5 pb-16
                 text-white
                 sm:px-10 sm:pb-20

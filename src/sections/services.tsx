@@ -5,13 +5,33 @@ import { SwiperSlide } from "swiper/react";
 export function Services() {
 
     const services = [
-        { title: "Cabelos", alt: "Serviço de Cabelos", src: "/cabeloo.jpg" },
-        { title: "Sobrancelhas", alt: "Serviço de Sobrancelhas", src: "/sobrancelha.jpg" },
-        { title: "Manicure", alt: "Serviço de Manicure", src: "/mao.jpg" },
-        { title: "Pedicure", alt: "Serviço de Pedicure", src: "/pe.jpg" },
+        {
+            title: "Cabelos",
+            description: "Cortes, tratamentos e cuidados para seus fios.",
+            alt: "Serviço de Cabelos",
+            src: "/cabeloo.jpg"
+        },
+        {
+            title: "Sobrancelhas",
+            description: "Design para valorizar e harmonizar seu olhar.",
+            alt: "Serviço de Sobrancelhas",
+            src: "/sobrancelha.jpg"
+        },
+        {
+            title: "Manicure",
+            description: "Cuidados especiais para mãos sempre impecáveis.",
+            alt: "Serviço de Manicure",
+            src: "/mao.jpg"
+        },
+        {
+            title: "Pedicure",
+            description: "Cuidado e beleza para deixar seus pés perfeitos.",
+            alt: "Serviço de Pedicure",
+            src: "/pe.jpg"
+        },
     ];
     return (
-        <section className="relative bg-[#F2EDE7] px-4  lg:px-40 pb-10 md:pb-20 pt-12 -mt-12 xl:mt-12 border-b  border-[#c08815]/10">
+        <section className="relative bg-[#F2EDE7] px-4  lg:px-40 pb-10 md:pb-20 pt-12 mt-12 xl:mt-12 border-b  border-[#c08815]/10">
 
             <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
                 <svg
@@ -49,8 +69,8 @@ export function Services() {
                             key={index}
                             className="flex flex-col group cursor-pointer"
                         >
-
                             <div className="w-full aspect-[3/4] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+
                                 <Image
                                     fill
                                     alt={service.alt}
@@ -58,17 +78,45 @@ export function Services() {
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                 />
-                            </div>
+                                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                                {/* Gradiente */}
+                                <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-                            {/* Informações e Ação */}
-                            <div className="mt-5 flex flex-col items-center text-center">
-                                <h3 className="text-xl font-medium tracking-wide text-gray-800 group-hover:text-[#c08815] transition-colors duration-300">
-                                    {service.title}
-                                </h3>
+                                {/* Conteúdo */}
+                                <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between">
 
-                                <button className="mt-2 text-xs uppercase tracking-[0.2em] font-semibold text-[#c08815] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c08815] after:origin-right group-hover:after:origin-left group-hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300">
-                                    Agendar serviço
-                                </button>
+                                    <div className="max-w-[80%]">
+                                        <h3 className="text-xl font-medium tracking-wide text-white">
+                                            {service.title}
+                                        </h3>
+
+                                        <p className="mt-1 text-xs tracking-wide text-white/75">
+                                            {service.description}
+                                        </p>
+                                    </div>
+
+                                    {/* Seta */}
+                                    <button
+                                        className="text-white transition-transform duration-300 group-hover:translate-x-1"
+                                        aria-label={`Agendar ${service.title}`}
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth={1.5}
+                                            stroke="currentColor"
+                                            className="w-6 h-6"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                            />
+                                        </svg>
+                                    </button>
+
+                                </div>
                             </div>
                         </div>
                     ))}
@@ -104,23 +152,54 @@ export function Services() {
                                     key={index}
                                     className="flex flex-col group cursor-pointer"
                                 >
-                                    <div className="w-full aspect-[4/5]  rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+                                    <div className="w-full aspect-[6/7] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+
                                         <Image
                                             fill
                                             alt={service.alt}
                                             src={service.src}
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                             className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                         />
-                                    </div>
+                                        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                                        {/* Gradiente */}
+                                        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-                                    <div className="mt-3 sm:mt-5 flex flex-col items-center text-center">
-                                        <h3 className="text-lg sm:text-xl font-medium tracking-wide text-gray-800 group-hover:text-[#c08815] transition-colors duration-300">
-                                            {service.title}
-                                        </h3>
+                                        {/* Conteúdo */}
+                                        <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between">
 
-                                        <button className="mt-1.5 sm:mt-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] font-semibold text-[#c08815] transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c08815] after:origin-right group-hover:after:origin-left group-hover:after:scale-x-100 after:scale-x-0 after:transition-transform after:duration-300">
-                                            Agendar serviço
-                                        </button>
+                                            <div className="max-w-[80%]">
+                                                <h3 className="text-xl font-medium tracking-wide text-white">
+                                                    {service.title}
+                                                </h3>
+
+                                                <p className="mt-1 text-xs tracking-wide text-white/75">
+                                                    {service.description}
+                                                </p>
+                                            </div>
+
+                                            {/* Seta */}
+                                            <button
+                                                className="text-white transition-transform duration-300 group-hover:translate-x-1"
+                                                aria-label={`Agendar ${service.title}`}
+                                            >
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    strokeWidth={1.5}
+                                                    stroke="currentColor"
+                                                    className="w-6 h-6"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                                                    />
+                                                </svg>
+                                            </button>
+
+                                        </div>
                                     </div>
                                 </div>
                             </SwiperSlide>

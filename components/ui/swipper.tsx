@@ -68,7 +68,7 @@ export default function Swipper({
         className,
       )}
       spaceBetween={10}
-      slidesPerView={1.1}
+      slidesPerView={1.2}
       loop={loop}
       navigation
       pagination={pagination ? { clickable: true } : undefined}

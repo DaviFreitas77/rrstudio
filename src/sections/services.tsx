@@ -53,7 +53,7 @@ export function Services() {
                     <span className="text-xs font-medium uppercase tracking-[0.2em] text-[#c08815] mb-4 block">
                         Experiência Exclusiva
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-light tracking-tight text-gray-900 mb-4">
+                    <h2 className="text-3xl sm:text-4xl font-light tracking-tight text-gray-900 mb-4">
                         Confira Nossos Serviços
                     </h2>
                     <div className="w-12 h-[1px] bg-[#c08815]/40 mx-auto mb-4" />

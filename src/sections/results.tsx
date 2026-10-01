@@ -1,5 +1,6 @@
 import { Marquee } from "@/components/ui/marquee";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export function Results() {
@@ -36,41 +37,57 @@ export function Results() {
 
       <div className="flex items-center justify-center gap-8 px-6 flex-col lg:flex-row">
         {/* Comparação 1 */}
-        <div className="grid grid-cols-2 gap-2 w-full max-w-xl lg:max-w-2xl">
-          <Image
-            src="/images/comparations/8.png"
-            alt="Antes do serviço de manicure"
-            width={800}
-            height={600}
-            className="w-full aspect-[5/6] object-cover rounded-sm"
-          />
+        <div className="relative grid w-full max-w-xl grid-cols-2 gap-2 lg:max-w-2xl">
+          <div className="pointer-events-none absolute top-1/2 left-1/2 z-10 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-black/20 text-white backdrop-blur-sm">
+            <ArrowRight size={18} aria-hidden="true" />
+          </div>
 
-          <Image
-            src="/images/comparations/9.png"
-            alt="Depois do serviço de manicure"
-            width={800}
-            height={600}
-            className="w-full aspect-[5/6] object-cover rounded-sm"
-          />
+          <div className="relative">
+            <Image
+              src="/images/comparations/8.png"
+              alt="Antes do serviço de manicure"
+              width={800}
+              height={600}
+              className="aspect-[5/6] w-full rounded-sm object-cover"
+            />
+          </div>
+
+          <div className="relative">
+            <Image
+              src="/images/comparations/9.png"
+              alt="Depois do serviço de manicure"
+              width={800}
+              height={600}
+              className="aspect-[5/6] w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
 
         {/* Comparação 2 */}
-        <div className="grid grid-cols-2 gap-2 w-full max-w-xl lg:max-w-2xl">
-          <Image
-            src="/images/comparations/3.jpg"
-            alt="Antes do serviço"
-            width={800}
-            height={600}
-            className="w-full aspect-[5/6] object-cover rounded-sm"
-          />
+        <div className="relative grid w-full max-w-xl grid-cols-2 gap-2 lg:max-w-2xl">
+          <div className="pointer-events-none absolute top-1/2 left-1/2 z-10 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-black/20 text-white backdrop-blur-sm">
+            <ArrowRight size={18} aria-hidden="true" />
+          </div>
 
-          <Image
-            src="/images/comparations/4.jpg"
-            alt="Depois do serviço"
-            width={800}
-            height={600}
-            className="w-full aspect-[5/6] object-cover rounded-sm"
-          />
+          <div className="relative">
+            <Image
+              src="/images/comparations/3.jpg"
+              alt="Antes do serviço"
+              width={800}
+              height={600}
+              className="aspect-[5/6] w-full rounded-sm object-cover"
+            />
+          </div>
+
+          <div className="relative">
+            <Image
+              src="/images/comparations/4.jpg"
+              alt="Depois do serviço"
+              width={800}
+              height={600}
+              className="aspect-[5/6] w-full rounded-sm object-cover"
+            />
+          </div>
         </div>
       </div>
       <div className="mt-6 bg-gradient-to-r from-surface to-cream">

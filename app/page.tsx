@@ -8,6 +8,7 @@ import { Feedback } from "@/src/sections/feedback";
 import { Results } from "@/src/sections/results";
 import { Journey } from "@/src/sections/journey";
 import { Button } from "@/components/ui/button";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 export default function Home() {
   return (
@@ -19,12 +20,20 @@ export default function Home() {
       <Feedback />
       <section className="flex justify-center px-4 py-20">
         <div className="cta relative flex min-h-[420px] w-full max-w-[1400px] flex-col items-center justify-center overflow-hidden rounded-[2rem] bg-cover bg-center p-8 text-center md:items-start md:p-14 md:text-left lg:p-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-primary/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/5 to-transparent" />
 
           <div className="relative z-10 flex max-w-xl flex-col items-center text-white md:items-start">
-            <span className="mb-4 block text-sm uppercase tracking-[0.25em] text-white/70">
-              Um momento só seu
-            </span>
+         <span
+            className="
+                        mb-6
+                        flex items-center gap-4
+                        text-xs font-medium uppercase
+                        tracking-[0.2em] text-white
+                    "
+          >
+           
+            UM MOMENTO SÓ SEU
+          </span>
 
             <h3 className="max-w-lg text-4xl leading-tight md:text-5xl lg:text-6xl">
               Sua beleza merece esse cuidado.
@@ -87,6 +96,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTop />
     </main>
   );
 }

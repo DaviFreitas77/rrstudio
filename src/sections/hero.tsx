@@ -1,11 +1,12 @@
 import { TbSparkle } from "react-icons/tb";
 import { Button } from "../../components/ui/button";
 import CircularText from "../../components/ui/circularText";
+import { motion } from "framer-motion";
 
 export function Hero() {
-    return (
-        <section
-            className="
+  return (
+    <section
+      className="
                 hero relative flex h-svh
                 items-center justify-start
                 px-5 pb-16
@@ -15,9 +16,9 @@ export function Hero() {
                 lg:justify-start
                 2xl:px-45
             "
-        >
-            <div
-                className="
+    >
+      <div
+        className="
                     relative z-10 w-full
                     max-w-[340px]
                     text-left
@@ -26,64 +27,81 @@ export function Hero() {
                     lg:max-w-xl
                     2xl:max-w-2xl
                 "
-            >
-                <span
-                    className="
+      >
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <span
+            className="
                         mb-6
                         flex items-center gap-4
                         text-xs font-medium uppercase
                         tracking-[0.2em] text-white
                     "
-                >
-                    <span className="hidden h-px w-8 bg-[#C9A24D] lg:block" />
-                    UM MOMENTO SÓ SEU
-                </span>
-
-                <h1
-                    className="
+          >
+            <span className="hidden h-px w-8 bg-primary lg:block" />
+            UM MOMENTO SÓ SEU
+          </span>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <h1
+            className="
                         text-4xl font-medium
                         sm:text-5xl
                         md:text-6xl
                         lg:leading-18
                         2xl:text-7xl 2xl:leading-20
                     "
-                >
-                    A arte de cuidar da{" "}
-                    <span className="text-[#C9A24D]">
-                        sua beleza
-                    </span>
-                </h1>
+          >
+            A arte de cuidar da <span className="text-primary">sua beleza</span>
+          </h1>
+        </motion.div>
 
-                <p
-                    className="
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <p
+            className="
                         mt-5 max-w-sm
                         text-sm leading-relaxed
-                        text-[#F2EDE9]/80
+                        text-background/80
                         sm:text-base
                         md:text-lg
                     "
-                >
-                    Cabelo, sobrancelhas e unhas para realçar
-                    sua beleza e expressar seu estilo. Atendimento
-                    no salão ou no conforto da sua casa.
-                </p>
+          >
+            Cabelo, sobrancelhas e unhas para realçar sua beleza e expressar seu
+            estilo. Atendimento no salão ou no conforto da sua casa.
+          </p>
+        </motion.div>
+        <div className="mt-5 hidden items-center gap-2 lg:flex">
+          <div className="h-0.5 w-full max-w-70 rounded-full bg-primary-dark sm:max-w-90 lg:w-110" />
 
-                <div className="mt-5 hidden items-center gap-2 lg:flex">
-                    <div className="h-0.5 w-full max-w-70 rounded-full bg-[#8b6d1f] sm:max-w-90 lg:w-110" />
-
-                    <TbSparkle
-                        size={18}
-                        color="#8b6d1f"
-                        className="shrink-0"
-                    />
-                </div>
-
-                <Button
-                    text="Agende seu horário"
-                    className="mt-8"
-                    onClick={() => alert("a")}
-                />
-            </div>
-        </section>
-    );
+          <TbSparkle
+            size={18}
+            color="var(--color-primary-dark)"
+            className="shrink-0"
+          />
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Button
+            text="Agende seu horário"
+            className="mt-8"
+            onClick={() => alert("a")}
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
 }

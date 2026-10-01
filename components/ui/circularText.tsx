@@ -120,7 +120,7 @@ const CircularText: React.FC<CircularTextProps> = ({
       </motion.div>
         {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-18 h-18 rounded-full border border-gray-200 flex items-center justify-center">
-          <span className="text-lg tracking-widest text-[#C9A24D]">RR</span>
+          <span className="text-lg tracking-widest text-primary">RR</span>
         </div>
       </div> */}
     </div>

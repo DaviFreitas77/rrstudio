@@ -44,7 +44,7 @@ body {
 }
 
 .hero {
-  background-image: url('/heroImage.png');
+  background-image: url('/hero.png');
   background-repeat: no-repeat;
   background-size: cover;
     background-attachment: scroll;
@@ -103,7 +103,7 @@ body {
   height: 0.20rem;
   margin: 0 !important;
   border-radius: 999px;
-  background: #000000;
+  background: var(--color-ink);
   opacity: 0.2;
   transition: width 220ms ease, opacity 220ms ease, transform 220ms ease;
 }
@@ -123,9 +123,28 @@ body {
   opacity: 0.65;
 }
 
+.cta {
+  background-image: url('/cta.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position: 0% 20%;
+}
+
 
 /* Animação Customizada do Tailwind v4 / @theme */
 @theme inline {
+  --color-page: #f2ede7;
+  --color-background: #f2ede7;
+  --color-surface: #ffffff;
+  --color-ink: #111111;
+  --color-muted: #6b7280;
+  --color-primary: #c9a24d;
+  --color-primary-dark: #8b6d1f;
+  --color-primary-border: #c08815;
+  --color-primary-button: #b9913e;
+  --color-primary-button-hover: #b38f3c;
+  --color-cream: #eadabc;
   --animate-shine: shine var(--duration) infinite linear;
 
   @keyframes shine {

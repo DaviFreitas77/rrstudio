@@ -51,7 +51,6 @@ export default function Swipper({
               delay: 0,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
-          
             }
           : false
       }
@@ -60,12 +59,12 @@ export default function Swipper({
       preventInteractionOnTransition={true}
       speed={speed}
       direction={direction}
-      modules={[Autoplay, FreeMode,Pagination]}
+      modules={[Autoplay, FreeMode, Pagination]}
       freeMode={freeMode}
       className={cn(
         " swiper-continuous  w-full px-4",
         isVertical && "h-[36rem] sm:h-[40rem] md:h-[46rem] lg:h-[52rem]",
-        className,
+        className
       )}
       spaceBetween={10}
       slidesPerView={1.2}

@@ -26,7 +26,7 @@ export function Results() {
   ];
 
   return (
-    <div className="py-20 border-b border-primary-border/10">
+    <div id="resultados" className="py-20 border-b border-primary-border/10">
       <SectionHeading
         className="px-6"
         eyebrow="Cada resultado conta uma história."

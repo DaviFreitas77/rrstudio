@@ -31,7 +31,7 @@ export function Services() {
     },
   ];
   return (
-    <section className="relative bg-background px-4 lg:px-40 pb-10 md:pb-20 pt-12 mt-12 xl:mt-12 border-b border-primary-border/10">
+    <section id="servicos" className="relative bg-background px-4 lg:px-40 pb-10 md:pb-20 pt-12 mt-12 xl:mt-12 border-b border-primary-border/10">
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
         <svg
           className="relative block w-full h-12 sm:h-20 md:h-28 lg:h-36"

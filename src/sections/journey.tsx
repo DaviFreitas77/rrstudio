@@ -125,7 +125,7 @@ export function Journey() {
   };
 
   return (
-    <section className=" flex flex-col items-center px-4 py-20 border-b border-primary-border/10">
+    <section id="jornada" className=" flex flex-col items-center px-4 py-20 border-b border-primary-border/10">
       <SectionHeading
         eyebrow="Detalhes que importam"
         title="Mais que números, experiências"

@@ -43,6 +43,16 @@ body {
   font-family: var(--font-ptserif), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .hero {
   background-image: url('/hero.png');
   background-repeat: no-repeat;
@@ -124,11 +134,18 @@ body {
 }
 
 .cta {
-  background-image: url('/cta.jpg');
+  background-image: url('/ctaa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-position: 0% 20%;
+}
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60);
+  z-index: 0;
 }
 
 

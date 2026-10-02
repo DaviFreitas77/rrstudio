@@ -94,7 +94,7 @@ export function Professionals() {
                                             </p>
                                         </div>
 
-                                        <span className="absolute right-5 bottom-5 flex size-10 items-center justify-center rounded-full border border-white/80 text-white transition-transform duration-300 group-hover:translate-x-1">
+                                        <span className="absolute right-5 bottom-5 flex size-10 items-center justify-center rounded-full  text-white transition-transform duration-300 group-hover:translate-x-1">
                                             <ArrowRight size={18} aria-hidden="true" />
                                         </span>
                                     </article>

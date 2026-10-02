@@ -27,7 +27,7 @@ export function ScrollToTop() {
       aria-label="Voltar ao topo"
       title="Voltar ao topo"
       onClick={scrollToTop}
-      className={`fixed right-5 bottom-5 z-50 flex size-12 items-center justify-center rounded-full border border-primary-border bg-primary text-white shadow-lg transition-all duration-300 hover:bg-primary-dark focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none md:right-8 md:bottom-8 ${
+      className={`fixed right-5 bottom-5 z-50 flex size-12 items-center justify-center rounded-full border border-primary-border bg-primaryy text-white shadow-lg transition-all duration-300 hover:bg-primary-dark focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:outline-none md:right-8 md:bottom-8 ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"

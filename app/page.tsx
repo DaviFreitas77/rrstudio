@@ -8,6 +8,7 @@ import "swiper/css";
 import { Feedback } from "@/src/sections/feedback";
 import { Results } from "@/src/sections/results";
 import { Journey } from "@/src/sections/journey";
+import { Location } from "@/src/sections/location";
 import { Button } from "@/components/ui/button";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { SiteHeader } from "@/components/ui/site-header";
@@ -23,6 +24,7 @@ export default function Home() {
       <Results />
       <Professionals />
       <Journey />
+      <Location />
       <Feedback />
       <section id="agendamento" className="flex justify-center px-4 py-20">
         <div className="cta relative flex min-h-[420px] w-full max-w-[1400px] flex-col items-center justify-center overflow-hidden rounded-[2rem] bg-cover bg-center p-8 text-center md:items-start md:p-14 md:text-left lg:p-20">

@@ -20,7 +20,7 @@ export function Button({ text, className, onClick }: ButtonProps) {
           border border-primaryu-button
           bg-primary-button
           px-4 py-3
-          text-white
+         
           transition
           lg:max-w-70
           lg:bg-transparent

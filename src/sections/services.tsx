@@ -58,7 +58,7 @@ export function Services() {
   return (
     <section
       id="servicos"
-      className="mt-12 overflow-x-clip border-b border-muted px-4 pt-12 pb-16 md:pb-24 lg:px-40 xl:mt-12"
+      className="mt-12 overflow-x-clip border-b border-muted px-4 pt-12 pb-16 md:pb-24 lg:px-10 xl:mt-12"
     >
       <div className="z-10 mx-auto max-w-88xl">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.8fr] lg:items-stretch">
@@ -68,6 +68,7 @@ export function Services() {
                 eyebrow="Experiência Exclusiva"
                 title="Confira Nossos Serviços"
                 description="Descubra os nossos serviços exclusivos e transforme a sua aparência com um toque de elegância e cuidado."
+                align="center-mobile-left"
               />
             </div>
 
@@ -92,7 +93,7 @@ export function Services() {
           <div className="hidden">
             {services.map((service, index) => (
               <div key={index} className="flex flex-col group cursor-pointer">
-                <div className="w-full aspect-[3/4] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+                <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
                   <Image
                     fill
                     alt={service.alt}
@@ -142,7 +143,7 @@ export function Services() {
             ))}
           </div>
 
-          <div className="services-swiper relative  min-w-0 w-full max-w-8xl overflow-hidden pb-10 ">
+          <div className="services-swiper relative   w-full overflow-hidden pb-10  ">
             <Swipper
               direction="horizontal"
               loop={false}
@@ -162,7 +163,7 @@ export function Services() {
                   slidesPerView: 2,
                 },
                 1280: {
-                  slidesPerView: 3.2,
+                  slidesPerView: 3.5,
                 },
                 640: {
                   slidesPerView: 2,
@@ -178,7 +179,7 @@ export function Services() {
                     key={index}
                     className="flex flex-col group cursor-pointer"
                   >
-                    <div className="w-full aspect-[6/7] sm:aspect-[2/3] rounded-sm overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
+                    <div className="w-full aspect-[6/7] sm:aspect-[2/3] rounded-2xl overflow-hidden relative bg-gray-200/50 shadow-sm group-hover:shadow-md transition-all duration-500">
                       <Image
                         fill
                         alt={service.alt}

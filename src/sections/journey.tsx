@@ -92,11 +92,11 @@ export function Journey() {
 
         <span className="absolute bottom-0 left-0 h-3 w-3 border-b-2 border-l-2 border-primary" />
 
-        <span className="absolute bottom-0 right-0 h-3 w-3 border-b-2 border-r-2 border-primary" />
+        <span className="absolute bottom-0 right-0 h-3 w-3 border-b-2 border-r-2 border-p" />
 
         {/* Métrica */}
         <div className="relative z-10">
-          <p className="text-5xl font-light leading-none text-primary sm:text-6xl">
+          <p className="text-5xl font-light leading-none text-text-destaque sm:text-6xl">
             <span className="text-3xl">+</span>
             <CountUp
               from={0}
@@ -125,7 +125,7 @@ export function Journey() {
   };
 
   return (
-    <section id="jornada" className=" flex flex-col items-center px-4 py-20 border-b border-primary-border/10">
+    <section id="jornada" className=" flex flex-col items-center px-4 py-20 border-b border-muted">
       <SectionHeading
         eyebrow="Detalhes que importam"
         title="Mais que números, experiências"

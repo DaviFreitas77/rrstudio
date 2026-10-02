@@ -15,18 +15,18 @@ export function SectionHeading({
 }: SectionHeadingProps) {
     return (
         <div className={cn("mb-12 text-center md:mb-16", className)}>
-            <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-primary-border">
+            <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-secondary">
                 {eyebrow}
             </span>
 
-            <h2 className="mb-4 text-3xl font-light tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="mb-4 text-3xl font-light tracking-tight text-primaryy sm:text-4xl">
                 {title}
             </h2>
 
-            <div className="mx-auto mb-4 h-px w-12 bg-primary-border/40" />
+            <div className="mx-auto mb-4 h-px w-12 bg-muted" />
 
             {description && (
-                <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-gray-600 md:text-base">
+                <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-tertiary md:text-base">
                     {description}
                 </p>
             )}

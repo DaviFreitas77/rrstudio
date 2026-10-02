@@ -17,7 +17,7 @@ export function Button({ text, className, onClick }: ButtonProps) {
           flex w-full
           cursor-pointer items-center
           overflow-hidden rounded
-          border border-primary-button
+          border border-primaryu-button
           bg-primary-button
           px-4 py-3
           text-white
@@ -27,7 +27,7 @@ export function Button({ text, className, onClick }: ButtonProps) {
         "
         onClick={onClick}
       >
-        <div className="absolute left-0 top-0 hidden h-full w-10 bg-primary-button transition-all duration-500 group-hover:w-full lg:block" />
+        <div className="absolute left-0 top-0 hidden h-full w-10 bg-destaque transition-all duration-500 group-hover:w-full lg:block" />
 
         {/* Texto centralizado */}
         <span className="relative z-10 w-full text-center">

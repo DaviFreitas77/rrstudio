@@ -60,20 +60,20 @@ html {
     background-attachment: scroll;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1024px) {
   .hero {
-    background-image: url('/heroImage.png');
+    background-image: url('/heroMobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 40% center;
-      background-attachment: scroll;
+    background-position: center;
+    background-attachment: scroll;
   }
 
 }
 
 @media (max-width: 1024px) {
   .hero {
-    background-image: url('/heroImageM.jpg');
+    background-image: url('/heroMobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 40% center;
@@ -85,7 +85,6 @@ html {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.68);
     z-index: 0;
   }
 
@@ -152,17 +151,15 @@ html {
 /* Animação Customizada do Tailwind v4 / @theme */
 @theme inline {
   --color-page: #f2ede7;
-  --color-background: #f2ede7;
-  --color-surface: #ffffff;
-  --color-ink: #111111;
-  --color-muted: #6b7280;
-  --color-primary: #c9a24d;
-  --color-primary-dark: #8b6d1f;
-  --color-primary-border: #c08815;
-  --color-primary-button: #b9913e;
-  --color-primary-button-hover: #b38f3c;
-  --color-cream: #eadabc;
-  --animate-shine: shine var(--duration) infinite linear;
+  --color-background: #ffffff;
+  --color-primaryy: #050505;
+  --color-secondary: #1A1A1A;    
+  --color-tertiary: #333333;
+  --color-muted: #D9D9D9;
+  --color-destaque: #A67C52;
+
+
+ 
 
   @keyframes shine {
     0% {

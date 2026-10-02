@@ -13,7 +13,7 @@ import { SiteHeader } from "@/components/ui/site-header";
 
 export default function Home() {
   return (
-    <main className="bg-page">
+    <main className="bg-background">
       <SiteHeader />
       <div id="inicio">
         <Hero />

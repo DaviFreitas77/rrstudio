@@ -1,32 +1,22 @@
 import { TbSparkle } from "react-icons/tb";
 import { Button } from "../../components/ui/button";
-import CircularText from "../../components/ui/circularText";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
     <section
       className="
-                hero relative flex h-svh
-                items-center justify-start
-                px-5 pb-16
-                text-white
-                sm:px-10 sm:pb-20
-                md:items-center md:px-20 md:pb-0
-                lg:justify-start
-                2xl:px-45
-            "
+        hero relative flex h-svh items-end justify-start px-5 pb-14 text-white
+        lg:items-center lg:px-20 lg:pb-0
+        2xl:px-45
+      "
     >
       <div
         className="
-                    relative z-10 w-full
-                    max-w-[340px]
-                    text-left
-                    sm:max-w-lg
-                    md:max-w-140
-                    lg:max-w-xl
-                    2xl:max-w-2xl
-                "
+          relative z-10 w-full max-w-[300px] text-left
+          md:max-w-[500px]
+          2xl:max-w-xl
+        "
       >
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -35,14 +25,12 @@ export function Hero() {
         >
           <span
             className="
-                        mb-6
-                        flex items-center gap-4
-                        text-xs font-medium uppercase
-                        tracking-[0.2em] text-white
-                    "
+              mb-5 hidden items-center gap-4 text-xs font-medium uppercase
+              tracking-[0.2em] text-white lg:flex
+            "
           >
-            <span className="hidden h-px w-8 bg-primary lg:block" />
-            UM MOMENTO SÓ SEU
+            <span className="hidden h-px w-8 bg-muted lg:block" />
+            STUDIO JF | BELEZA & ESTÉTICA
           </span>
         </motion.div>
         <motion.div
@@ -52,16 +40,17 @@ export function Hero() {
         >
           <h1
             className="
-                        text-4xl font-medium
-                        sm:text-5xl
-                        md:text-6xl
-                        lg:leading-18
-                        2xl:text-7xl 2xl:leading-20
-                    "
+              text-4xl  font-medium leading-[1.05]
+              md:text-6xl lg:leading-18
+              2xl:text-8xl 2xl:leading-24
+            "
           >
-            A arte de cuidar da <span className="text-primary">sua beleza</span>
+            O <span className="text-destaque">maior </span> complexo de{" "}
+            <span className="text-destaque">beleza</span> da <br></br>
+            <span className="text-destaque">zona leste</span>
           </h1>
         </motion.div>
+        <div className=" mt-4 h-0.5 w-full max-w-10 lg:max-w-40 rounded-full bg-muted lg:w-110" />
 
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -70,27 +59,17 @@ export function Hero() {
         >
           <p
             className="
-                        mt-5 max-w-sm
-                        text-sm leading-relaxed
-                        text-background/80
-                        sm:text-base
-                        md:text-lg
-                    "
+              mt-5 max-w-lg text-sm leading-relaxed text-background/80
+              md:text-lg
+            "
           >
-            Cabelo, sobrancelhas e unhas para realçar sua beleza e expressar seu
-            estilo. Atendimento no salão ou no conforto da sua casa.
+            Um espaço para cuidar de você, valorizar sua beleza e tornar cada
+            momento especial.
           </p>
         </motion.div>
-        <div className="mt-5 hidden items-center gap-2 lg:flex">
-          <div className="h-0.5 w-full max-w-70 rounded-full bg-primary-dark sm:max-w-90 lg:w-110" />
 
-          <TbSparkle
-            size={18}
-            color="var(--color-primary-dark)"
-            className="shrink-0"
-          />
-        </div>
         <motion.div
+          className="hidden lg:block"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}

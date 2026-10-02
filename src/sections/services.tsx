@@ -9,43 +9,57 @@ export function Services() {
       title: "Cabelos",
       description: "Cortes, tratamentos e cuidados para seus fios.",
       alt: "Serviço de Cabelos",
-      src: "/cabeloo.jpg",
+      src: "/images/services/cabelo.png",
     },
     {
       title: "Sobrancelhas",
       description: "Design para valorizar e harmonizar seu olhar.",
       alt: "Serviço de Sobrancelhas",
-      src: "/sobrancelha.jpg",
+      src: "/images/services/sobrancelha.png",
     },
     {
       title: "Manicure",
       description: "Cuidados especiais para mãos sempre impecáveis.",
       alt: "Serviço de Manicure",
-      src: "/mao.jpg",
+      src: "/images/services/mao.png",
     },
     {
       title: "Pedicure",
       description: "Cuidado e beleza para deixar seus pés perfeitos.",
       alt: "Serviço de Pedicure",
-      src: "/pe.jpg",
+      src: "/images/services/pe.png",
+    },
+    {
+      title: "Estética",
+      description: "Cuidados faciais e corporais para realçar sua beleza.",
+      alt: "Serviço de Estética",
+      src: "/images/services/sobrancelha.png",
+    },
+    {
+      title: "Bronzeamento Artificial",
+      description: "Um bronzeado uniforme para iluminar sua pele.",
+      alt: "Serviço de Bronzeamento Artificial",
+      src: "/images/services/sobrancelha.png",
+    },
+    {
+      title: "Depilação",
+      description: "Pele macia com cuidado, conforto e delicadeza.",
+      alt: "Serviço de Depilação",
+      src: "/images/services/mao.png",
+    },
+    {
+      title: "Maquiadora",
+      description: "Produções personalizadas para todos os seus momentos.",
+      alt: "Serviço de Maquiadora",
+      src: "/images/services/mao.png",
     },
   ];
   return (
-    <section id="servicos" className="relative bg-background px-4 lg:px-40 pb-10 md:pb-20 pt-12 mt-12 xl:mt-12 border-b border-primary-border/10">
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[98%] pointer-events-none">
-        <svg
-          className="relative block w-full h-12 sm:h-20 md:h-28 lg:h-36"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0 C150,90 350,-40 500,40 C650,120 900,10 1200,40 L1200,120 L0,120 Z"
-            fill="var(--color-background)"
-          ></path>
-        </svg>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section
+      id="servicos"
+      className="  px-4 lg:px-40 pb-10 md:pb-20 pt-12 mt-12 xl:mt-12 border-b border-muted"
+    >
+      <div className=" z-10 max-w-88xl mx-auto">
         <SectionHeading
           eyebrow="Experiência Exclusiva"
           title="Confira Nossos Serviços"
@@ -63,9 +77,9 @@ export function Services() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black via-black/30 to-transparent" />
                 {/* Gradiente */}
-                <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
                 {/* Conteúdo */}
                 <div className="absolute bottom-6 left-5 right-5 flex items-end justify-between">

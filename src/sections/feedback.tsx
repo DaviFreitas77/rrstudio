@@ -63,7 +63,7 @@ export function Feedback() {
     },
   ];
   return (
-    <section id="feedback" className="flex flex-col items-center justify-center px-4 py-20 border-b border-primary-border/10">
+    <section id="feedback" className="flex flex-col items-center justify-center px-4 py-20 border-b border-muted">
       <SectionHeading eyebrow="Feedbacks" title="Quem frequenta, recomenda" />
 
       <div className="max-w-[1400px] w-full grid grid-cols-1 lg:grid-cols-[0.8fr_1.5fr] gap-5">

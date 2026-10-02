@@ -15,20 +15,20 @@ export function SiteHeader() {
       <div className="flex items-center justify-between  pb-5">
         <Link
           href="#inicio"
-          className="shrink-0 text-sm font-semibold tracking-[0.28em] transition-colors hover:text-primary"
+          className="shrink-0 text-sm font-semibold tracking-[0.28em] transition-colors hover:text-destaque"
         >
           Logo
         </Link>
 
         <nav
           aria-label="Navegação principal"
-          className="hidden items-center gap-7 md:flex lg:gap-10"
+          className="hidden items-center gap-7 lg:flex lg:gap-10"
         >
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[10px] uppercase tracking-[0.18em] text-white/75 transition-colors hover:text-primary lg:text-xs"
+              className="text-[10px] uppercase tracking-[0.18em] text-white/75 transition-colors hover:text-destaque lg:text-xs"
             >
               {item.label}
             </Link>
@@ -37,7 +37,7 @@ export function SiteHeader() {
 
         <Link
           href="#agendamento"
-          className="inline-flex items-center gap-2 border border-primary bg-primary px-6 py-2 text-[10px] uppercase tracking-[0.16em] text-white transition-colors hover:bg-primary-dark sm:px-4"
+          className="inline-flex items-center gap-2 border border-destaque bg-destaque px-6 py-2 text-[10px] uppercase tracking-[0.16em] text-white transition-colors sm:px-4"
         >
           Agendar agora
           <ArrowRight size={16} aria-hidden="true" />

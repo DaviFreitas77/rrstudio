@@ -5,6 +5,7 @@ type SectionHeadingProps = {
     title: string;
     description?: string;
     className?: string;
+    align?: "center" | "left" | "center-mobile-left";
 };
 
 export function SectionHeading({
@@ -12,9 +13,23 @@ export function SectionHeading({
     title,
     description,
     className,
+    align = "center",
 }: SectionHeadingProps) {
+    const isLeftAligned = align === "left";
+    const isCenteredOnMobile = align === "center-mobile-left";
+
     return (
-        <div className={cn("mb-12 text-center md:mb-16", className)}>
+        <div
+            className={cn(
+                "mb-5 md:mb-16",
+                                isLeftAligned
+                                        ? "text-left"
+                                        : isCenteredOnMobile
+                                            ? "text-center lg:text-left"
+                                            : "text-center",
+                className
+            )}
+        >
             <span className="mb-4 block text-xs font-medium uppercase tracking-[0.2em] text-secondary">
                 {eyebrow}
             </span>
@@ -23,10 +38,25 @@ export function SectionHeading({
                 {title}
             </h2>
 
-            <div className="mx-auto mb-4 h-px w-12 bg-muted" />
+            <div
+                className={cn(
+                    "mb-4 h-px w-12 bg-muted",
+                    (!isLeftAligned || isCenteredOnMobile) && "mx-auto",
+                    isCenteredOnMobile && "lg:mx-0"
+                )}
+            />
 
             {description && (
-                <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-tertiary md:text-base">
+                <p
+                    className={cn(
+                        "max-w-xl text-sm font-light leading-relaxed text-tertiary md:text-base",
+                                                isLeftAligned
+                                                        ? "mr-0"
+                                                        : isCenteredOnMobile
+                                                            ? "mx-auto lg:mx-0"
+                                                            : "mx-auto"
+                    )}
+                >
                     {description}
                 </p>
             )}

@@ -2,6 +2,7 @@
 
 import { Hero } from "@/src/sections/hero";
 import { Services } from "@/src/sections/services";
+import { Professionals } from "@/src/sections/professionals";
 import "swiper/css";
 
 import { Feedback } from "@/src/sections/feedback";
@@ -20,9 +21,10 @@ export default function Home() {
       </div>
       <Services />
       <Results />
+      <Professionals />
       <Journey />
       <Feedback />
-      <section className="flex justify-center px-4 py-20">
+      <section id="agendamento" className="flex justify-center px-4 py-20">
         <div className="cta relative flex min-h-[420px] w-full max-w-[1400px] flex-col items-center justify-center overflow-hidden rounded-[2rem] bg-cover bg-center p-8 text-center md:items-start md:p-14 md:text-left lg:p-20">
          
 

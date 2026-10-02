@@ -22,11 +22,9 @@ export function SectionHeading({
         <div
             className={cn(
                 "mb-5 md:mb-16",
-                                isLeftAligned
-                                        ? "text-left"
-                                        : isCenteredOnMobile
-                                            ? "text-center lg:text-left"
-                                            : "text-center",
+                                isLeftAligned || isCenteredOnMobile
+                                    ? "text-left"
+                                    : "text-left lg:text-center",
                 className
             )}
         >
@@ -41,8 +39,7 @@ export function SectionHeading({
             <div
                 className={cn(
                     "mb-4 h-px w-12 bg-muted",
-                    (!isLeftAligned || isCenteredOnMobile) && "mx-auto",
-                    isCenteredOnMobile && "lg:mx-0"
+                    !isLeftAligned && !isCenteredOnMobile && "lg:mx-auto"
                 )}
             />
 
@@ -50,11 +47,9 @@ export function SectionHeading({
                 <p
                     className={cn(
                         "max-w-xl text-sm font-light leading-relaxed text-tertiary md:text-base",
-                                                isLeftAligned
-                                                        ? "mr-0"
-                                                        : isCenteredOnMobile
-                                                            ? "mx-auto lg:mx-0"
-                                                            : "mx-auto"
+                                                isLeftAligned || isCenteredOnMobile
+                                                    ? "mr-0"
+                                                    : "lg:mx-auto"
                     )}
                 >
                     {description}

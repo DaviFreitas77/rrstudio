@@ -19,14 +19,14 @@ export function Location() {
 	return (
 		<section
 			id="localizacao"
-			className="border-b border-muted bg-background px-4 py-16 lg:px-10 lg:py-24"
+			className="max-w-full overflow-x-hidden border-b border-muted bg-background px-4 py-16 lg:px-10 lg:py-24"
 		>
-			<div className="mx-auto grid max-w-88xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+			<div className="mx-auto grid min-w-0 max-w-88xl items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
 				<div>
-					<span className="block text-center text-xs font-medium uppercase tracking-[0.2em] text-destaque lg:text-left">
+					<span className="block text-left text-xs font-medium uppercase tracking-[0.2em] text-destaque">
 						Onde estamos
 					</span>
-					<h2 className="mx-auto mt-4 max-w-xl text-center text-4xl leading-[0.98] text-ink sm:text-5xl lg:mx-0 lg:text-left">
+					<h2 className="mt-4 max-w-xl text-left text-4xl leading-[0.98] text-ink sm:text-5xl">
 						Encontre a unidade mais perto de você.
 					</h2>
 
@@ -55,11 +55,11 @@ export function Location() {
 					</div>
 				</div>
 
-				<div className="relative aspect-[4/3] min-h-[360px] overflow-hidden bg-muted lg:min-h-[520px]">
+				<div className="relative min-w-0 max-w-full aspect-[4/3] min-h-[360px] overflow-hidden bg-muted lg:min-h-[520px]">
 					<iframe
 						title={`Mapa da ${mainLocation.name}`}
 						src={mainLocation.mapUrl}
-						className="h-full w-full border-0 grayscale"
+						className="block h-full max-w-full w-full border-0 grayscale"
 						loading="lazy"
 						referrerPolicy="no-referrer-when-downgrade"
 					/>

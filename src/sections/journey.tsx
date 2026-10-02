@@ -9,16 +9,16 @@ export function Journey() {
       className="overflow-hidden border-b border-muted bg-background px-4 py-16 lg:px-10 lg:py-24"
     >
       <div className="mx-auto grid max-w-88xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div className="order-2 text-center lg:order-1 lg:text-left">
+        <div className="order-2 text-left lg:order-1">
           <span className="text-xs font-medium uppercase tracking-[0.2em] text-destaque">
             Nossa experiência
           </span>
 
-          <h2 className="mx-auto mt-5 max-w-xl text-4xl leading-[0.98] text-ink sm:text-5xl lg:mx-0 lg:text-6xl">
+          <h2 className="mt-5 max-w-xl text-4xl leading-[0.98] text-ink sm:text-5xl lg:text-6xl">
             Cuidado que transforma cada visita.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink/70 sm:text-lg lg:mx-0">
+          <p className="mt-6 max-w-lg text-base leading-relaxed text-ink/70 sm:text-lg">
             Cada atendimento é pensado para valorizar sua beleza com técnica,
             escuta e um cuidado que continua depois do espelho.
           </p>

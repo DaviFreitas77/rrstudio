@@ -133,17 +133,17 @@ html {
 }
 
 .cta {
-  background-image: url('/ctaa.jpg');
+  background-image: url('/images/services/service.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-position: 0% 20%;
+  background-position: 10% 20%;
 }
 .cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.60);
+  background: rgba(0, 0, 0, 0.70);
   z-index: 0;
 }
 

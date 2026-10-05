@@ -25,7 +25,7 @@ export default function Home() {
       <Professionals />
       <Journey />
       <Location />
-      <Feedback />
+      {/* <Feedback /> */}
       <section id="agendamento" className="flex justify-center px-4 py-20">
         <div className="cta relative flex min-h-[420px] w-full max-w-[1400px] flex-col items-center justify-center overflow-hidden rounded-[2rem] bg-cover bg-center p-8 text-center md:items-start md:p-14 md:text-left lg:p-20">
          
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="relative bg-surface px-6 pt-20 pb-10 text-ink">
+      <footer className="relative bg-primaryy px-6 pt-20 pb-10 text-white">
         <div className="mx-auto max-w-[1215px]">
           {/* Conteúdo principal */}
           <div className="flex flex-col justify-between gap-12 md:flex-row">
